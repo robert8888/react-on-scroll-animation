@@ -208,7 +208,7 @@ Duration and delays based on value quantization to 50ms. If you need be more acc
 #### for easing 
 
 ```css  
-[data-rosa][data-rosa=easing="bounce"]{  
+[data-rosa][data-rosa-easing="bounce"]{  
     transition-timing-function: cubic-bezier(.61,-1.06,.5,1.83)
 }  
 ```  
