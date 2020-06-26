@@ -69,16 +69,16 @@ Rosa.propTypes = {
 ```javascript  
 import Rosa from "react-on-scroll-animation"  
 <Rosa animation="zoom-in"   
-     duration={300}   
-     delay={500}>  
+      duration={300}   
+      delay={500}>  
  {content} </Rosa>  
 ```  
 ```javascript  
 <Rosa animation="slide-right"   
-     anchor="#someId"   
-     anchorPlacement="bottom-top"   
-     offset={500}   
-     initClassName="custom-init-class">  
+      anchor="#someId"   
+      anchorPlacement="bottom-top"   
+      offset={500}   
+      initClassName="custom-init-class">  
  {content} </Rosa>  
 ```  
 
@@ -154,8 +154,8 @@ import Rosa from "react-on-scroll-animation"
 //import to local component or globally
 import "./style.css";
 <Rosa animation="custom-animation"  
-	  duration={2000}>
-		{content} 
+      duration={2000}>
+        {content} 
 </Rosa>
 ```
 ----
@@ -163,46 +163,47 @@ import "./style.css";
 /*to have more specific selector enable init class
 this allows you overwrite easing duration and delay */  
 .rosa[data-rosa][data-rosa="custom-rotating-zoom"]{  
-	 transition-duration: 690ms; 
-	 transition-delay: 310ms; 
-	 transition-property: transform, opacity; 
-	 transition-timing-function: ease; transform:  rotate(180deg) scale(0);
+     transition-duration: 690ms; 
+     transition-delay: 310ms; 
+     transition-property: transform, opacity; 
+     transition-timing-function: ease; transform:  rotate(180deg) scale(0);
  }  
 
 .rosa[data-rosa][data-rosa="custom-rotating-zoom"].rosa-animate{  
-	 opacity: 1; transform:  rotate(0) scale(1);
+    opacity: 1; transform:  rotate(0) scale(1);
  }  
 ```  
 ```javascript  
 <Rosa animation="custom-rotating-zoom"   
-	  initClassName="rosa" // possibility to write more specific selectors  
-	  duration={2000}> //this is overwriting by style 
-		  {content} 
+      initClassName="rosa" // possibility to write more specific selectors  
+      duration={2000}> // this is overwritten by style
+        {content} 
 </Rosa>  
 ```  
 
-## custom duration and delays and easing  
+## custom duration, delays and easing  
 Duration and delays based on value quantization to 50ms. If you need be more accurate you can specify your own value in css.  
+
+#### for duration  
+```css  
+[data-rosa][data-rosa-duration = 999]{ transition-delay: 0s}  
+[data-rosa][data-rosa-duration = 999].rosa-animate{  
+     transition-delay: 999ms
+ }  
+```  
 
 #### for delay  
 ```css  
 [data-rosa][data-rosa-delay = 666]{ transition-delay: 0s}  
 [data-rosa][data-rosa-delay = 666].rosa-animate{  
-	 transition-delay: 666ms
- }  
-```  
-#### for duration  
-```css  
-[data-rosa][data-rosa-duration = 999]{ transition-delay: 0s}  
-[data-rosa][data-rosa-duration = 999].rosa-animate{  
-	 transition-delay: 999ms
+    transition-delay: 666ms
  }  
 ```  
 #### for easing 
 
 ```css  
 [data-rosa][data-rosa=easing="bounce"]{  
-	transition-timing-function: cubic-bezier(.61,-1.06,.5,1.83)
+    transition-timing-function: cubic-bezier(.61,-1.06,.5,1.83)
 }  
 ```  
 ## callback  
@@ -216,8 +217,8 @@ callback(animated: boolean, target: HtmlElement){}
       callback={(animated, taregt) => {
           if(animated){
               setTimeout(()=> 
-	              target.closest(".section__code")
-                  .style.borderColor = "DarkCyan"
+                target.closest(".section__code")
+                .style.borderColor = "DarkCyan"
               , 1000)
           }
       }}>
@@ -236,7 +237,7 @@ callback(animated: boolean, target: HtmlElement){}
   
 ```javascript  
 <Rosa animation="side-up"   
-	  disable="mobile">   
+      disable="mobile">   
 	      {content}
 </Rosa>  
 ```  
