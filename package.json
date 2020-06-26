@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "main": "build/index.js",
   "description": "ROSA - React on scroll animation based on AOS css files and Intersection Observer api with polyfills",
+  "homepage": "https://robert8888.github.io/rosa-demo/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robert8888/react-on-scroll-animation"
+  },
   "keywords": [
     "ROSA",
     "React",

@@ -67,7 +67,13 @@ Rosa.propTypes = {
  ```
  ## usage  
 ```javascript  
+import "react-on-scroll-animation/build/index.css";
+/*Animations are based on css files you can easily 
+  overwriting it by you own rules, but you have to import 
+  css files from build pack separately. 
+  You can import or copy this file directly to your sass file as well.*/
 import Rosa from "react-on-scroll-animation"  
+
 <Rosa animation="zoom-in"   
       duration={300}   
       delay={500}>  

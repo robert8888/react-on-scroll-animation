@@ -25,7 +25,7 @@ const Footer = () =>{
                 <section className="footer__section">
                     <h3 className="section__title"> CHECK IT </h3>
                     <a className="footer__button" href="https://github.com/robert8888/react-on-scroll-animation">Check on github </a>
-                    <a className="footer__button" href="">Smell on npm</a>
+                    <a className="footer__button" href="https://www.npmjs.com/package/react-on-scroll-animation">Smell on npm</a>
                 </section>
                 <section className="footer__section">
                     <h3 className="section__title"> INSTALLATION NPM YARN</h3>
