@@ -1,0 +1,181 @@
+// Animations variables
+$rosa-distance: 100px !default;
+
+@media screen {
+  html:not(.no-js) {
+    /**
+    * Content animations:
+    * Content
+    * Content-up, Content-down, Content-left, Content-right
+    * Content-up-right, Content-up-left, Content-down-right, Content-down-left
+    */
+
+
+    [data-rosa^='fade'][data-rosa^='fade'] {
+      opacity: 0;
+      transition-property: opacity, transform;
+
+      &.rosa-animate {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    [data-rosa='fade-up'] {
+      transform: translate3d(0, $rosa-distance, 0);
+    }
+
+    [data-rosa='fade-down'] {
+      transform: translate3d(0, -$rosa-distance, 0);
+    }
+
+    [data-rosa='fade-right'] {
+      transform: translate3d(-$rosa-distance, 0, 0);
+    }
+
+    [data-rosa='fade-left'] {
+      transform: translate3d($rosa-distance, 0, 0);
+    }
+
+    [data-rosa='fade-up-right'] {
+      transform: translate3d(-$rosa-distance, $rosa-distance, 0);
+    }
+
+    [data-rosa='fade-up-left'] {
+      transform: translate3d($rosa-distance, $rosa-distance, 0);
+    }
+
+    [data-rosa='fade-down-right'] {
+      transform: translate3d(-$rosa-distance, -$rosa-distance, 0);
+    }
+
+    [data-rosa='fade-down-left'] {
+      transform: translate3d($rosa-distance, -$rosa-distance, 0);
+    }
+
+
+
+
+    /**
+    * Zoom animations:
+    * zoom-in, zoom-in-up, zoom-in-down, zoom-in-left, zoom-in-right
+    * zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
+    */
+
+    [data-rosa^='zoom'][data-rosa^='zoom'] {
+      opacity: 0;
+      transition-property: opacity, transform;
+
+      &.rosa-animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+
+    [data-rosa='zoom-in'] {
+      transform: scale(.6);
+    }
+
+    [data-rosa='zoom-in-up'] {
+      transform: translate3d(0, $rosa-distance, 0) scale(.6);
+    }
+
+    [data-rosa='zoom-in-down'] {
+      transform: translate3d(0, -$rosa-distance, 0) scale(.6);
+    }
+
+    [data-rosa='zoom-in-right'] {
+      transform: translate3d(-$rosa-distance, 0, 0) scale(.6);
+    }
+
+    [data-rosa='zoom-in-left'] {
+      transform: translate3d($rosa-distance, 0, 0) scale(.6);
+    }
+
+    [data-rosa='zoom-out'] {
+      transform: scale(1.2);
+    }
+
+    [data-rosa='zoom-out-up'] {
+      transform: translate3d(0, $rosa-distance, 0) scale(1.2);
+    }
+
+    [data-rosa='zoom-out-down'] {
+      transform: translate3d(0, -$rosa-distance, 0) scale(1.2);
+    }
+
+    [data-rosa='zoom-out-right'] {
+      transform: translate3d(-$rosa-distance, 0, 0) scale(1.2);
+    }
+
+    [data-rosa='zoom-out-left'] {
+      transform: translate3d($rosa-distance, 0, 0) scale(1.2);
+    }
+
+
+
+
+    /**
+    * Slide animations
+    */
+
+    [data-rosa^='slide'][data-rosa^='slide'] {
+      transition-property: transform;
+      visibility: hidden;
+
+      &.rosa-animate {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    [data-rosa='slide-up'] {
+      transform: translate3d(0, 100%, 0);
+    }
+
+    [data-rosa='slide-down'] {
+      transform: translate3d(0, -100%, 0);
+    }
+
+    [data-rosa='slide-right'] {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    [data-rosa='slide-left'] {
+      transform: translate3d(100%, 0, 0);
+    }
+
+
+
+
+    /**
+    * Flip animations:
+    * flip-left, flip-right, flip-up, flip-down
+    */
+
+    [data-rosa^='flip'][data-rosa^='flip'] {
+      backface-visibility: hidden;
+      transition-property: transform;
+    }
+
+    [data-rosa='flip-left'] {
+      transform: perspective(2500px) rotateY(-100deg);
+      &.rosa-animate {transform: perspective(2500px) rotateY(0);}
+    }
+
+    [data-rosa='flip-right'] {
+      transform: perspective(2500px) rotateY(100deg);
+      &.rosa-animate {transform: perspective(2500px) rotateY(0);}
+    }
+
+    [data-rosa='flip-up'] {
+      transform: perspective(2500px) rotateX(-100deg);
+      &.rosa-animate {transform: perspective(2500px) rotateX(0);}
+    }
+
+    [data-rosa='flip-down'] {
+      transform: perspective(2500px) rotateX(100deg);
+      &.rosa-animate {transform: perspective(2500px) rotateX(0);}
+    }
+  }
+}

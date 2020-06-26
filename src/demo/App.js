@@ -1,12 +1,16 @@
 import React from 'react';
-import Example from '../lib';
-import { SecondExample } from '../lib';
+
+
+import Header from "./components/Header"
+import Sections from "./components/Sections/Sections";
+import Footer from "./components/Footer";
 
 const App = () => (
-  <div>
-    <Example />
-    <SecondExample />
-  </div>
+    <>
+    <Header/>
+    <Sections/>
+    <Footer/>
+    </>
 );
 
 export default App;

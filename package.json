@@ -2,6 +2,16 @@
   "name": "react-on-scroll-animation",
   "version": "0.1.0",
   "main": "build/index.js",
+  "description": "ROSA - React on scroll animation based on AOS css files and Intersection Observer api with polyfills",
+  "keywords": [
+    "ROSA",
+    "React",
+    "Scroll",
+    "Animation",
+    "Intersection",
+    "Observer",
+    "AOS"
+  ],
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -9,7 +19,10 @@
     "test": "node scripts/test.js"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "intersection-observer": "^0.11.0",
+    "lodash": "^4.17.15"
+  },
   "devDependencies": {
     "@babel/core": "7.6.0",
     "@svgr/webpack": "4.3.2",
@@ -24,6 +37,7 @@
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
+    "lodash": "^4.17.15",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.1.0",
     "eslint-config-react-app": "^5.0.2",
@@ -54,6 +68,7 @@
     "react-app-polyfill": "^1.0.4",
     "react-dev-utils": "^9.1.0",
     "react-dom": "^16.10.2",
+    "react-syntax-highlighter": "^12.2.1",
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",

@@ -684,6 +684,8 @@ module.exports = function(webpackEnv) {
       ? {
         react: 'react',
         'react-dom': 'react-dom',
+        'intersection-observer' : 'intersection-observer',
+        'lodash':'lodash'
       }
       : {},
     // Some libraries import Node modules but don't use them in the browser.

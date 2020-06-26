@@ -1,0 +1,23 @@
+// Generate Duration && Delay
+[data-rosa] {
+  @for $i from 1 through 60 {
+    &[data-rosa-duration='#{$i * 50}'] {
+      transition-duration: #{$i * 50}ms;
+    }
+
+    &[data-rosa-delay='#{$i * 50}'] {
+      transition-delay: 0s;
+
+      &.rosa-animate {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+}
+
+[data-rosa] {
+  pointer-events: none;
+  &.rosa-animate {
+    pointer-events: auto;
+  }
+}
