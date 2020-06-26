@@ -1,7 +1,6 @@
 import React from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
-// import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
 import {atomDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 SyntaxHighlighter.registerLanguage('bash', bash);
@@ -25,8 +24,8 @@ const Footer = () =>{
                 </section>
                 <section className="footer__section">
                     <h3 className="section__title"> CHECK IT </h3>
-                    <button className="footer__button">Check on github </button>
-                    <button className="footer__button">Smell on npm</button>
+                    <a className="footer__button" href="https://github.com/robert8888/react-on-scroll-animation">Check on github </a>
+                    <a className="footer__button" href="">Smell on npm</a>
                 </section>
                 <section className="footer__section">
                     <h3 className="section__title"> INSTALLATION NPM YARN</h3>

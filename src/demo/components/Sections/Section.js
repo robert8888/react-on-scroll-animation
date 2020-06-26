@@ -19,8 +19,10 @@ const Section = ({title, content}) => {
                           animation={animation}
                           {...((config?.rosa) ? config.rosa : {})}
                           className={"section__code section__code--" + counter.next()} >
-                        <Code css={config.css} jsx={config?.jsx || `<Rosa animation={'${animation}'}>{content}</Rosa>`}/>
-                    </Rosa>)
+                                <Code css={config.css}
+                                      jsx={config?.jsx || `<Rosa animation={'${animation}'}>{content}</Rosa>`}/>
+                    </Rosa>
+                )
             })}
         </section>
     )
